@@ -1,0 +1,200 @@
+/* SUWA SAHANA MADICAL CLINIC - Brand Color Theme */
+:root {
+  /* Brand palette */
+  --brand-primary: #11327c;
+  --brand-primary-dark: #162c60;
+  --brand-secondary: #6ac2a0;
+  --brand-secondary-dark: #53ab9b;
+  --brand-dark: #242424;
+  --brand-light: #e6e8e8;
+  --brand-muted: #626a7f;
+  --brand-border: #adc2cf;
+  --brand-white: #ffffff;
+
+  /* Semantic tokens */
+  --bg: var(--brand-light);
+  --panel: var(--brand-white);
+  --text: var(--brand-dark);
+  --text-secondary: var(--brand-muted);
+  --accent: var(--brand-primary);
+  --accent-hover: var(--brand-primary-dark);
+  --btn-hover: var(--brand-primary-dark);
+  --panel-border: var(--brand-border);
+  --border: var(--brand-border);
+  --table-header: var(--brand-light);
+  --input-bg: var(--brand-white);
+  --table-alt-row: var(--brand-light);
+  --tab: var(--brand-border);
+  --tab-active: var(--brand-white);
+  --success: var(--brand-secondary-dark);
+  --success-light: var(--brand-secondary);
+  --error: var(--brand-primary-dark);
+  --header-bg: var(--brand-primary);
+  --header-bg-dark: var(--brand-primary-dark);
+
+  /* RGB helpers for rgba() */
+  --brand-primary-rgb: 17, 50, 124;
+  --brand-secondary-rgb: 106, 194, 160;
+  --brand-dark-rgb: 36, 36, 36;
+
+  /* Bootstrap overrides */
+  --bs-primary: #11327c;
+  --bs-primary-rgb: 17, 50, 124;
+  --bs-secondary: #626a7f;
+  --bs-secondary-rgb: 98, 106, 127;
+  --bs-success: #53ab9b;
+  --bs-success-rgb: 83, 171, 155;
+  --bs-info: #6ac2a0;
+  --bs-info-rgb: 106, 194, 160;
+  --bs-warning: #adc2cf;
+  --bs-warning-rgb: 173, 194, 207;
+  --bs-danger: #162c60;
+  --bs-danger-rgb: 22, 44, 96;
+  --bs-light: #e6e8e8;
+  --bs-light-rgb: 230, 232, 232;
+  --bs-dark: #242424;
+  --bs-dark-rgb: 36, 36, 36;
+  --bs-body-bg: #e6e8e8;
+  --bs-body-color: #242424;
+  --bs-border-color: #adc2cf;
+  --bs-link-color: #11327c;
+  --bs-link-hover-color: #162c60;
+}
+
+/* Global base */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Bootstrap component overrides */
+.btn-primary {
+  --bs-btn-bg: var(--brand-primary);
+  --bs-btn-border-color: var(--brand-primary);
+  --bs-btn-hover-bg: var(--brand-primary-dark);
+  --bs-btn-hover-border-color: var(--brand-primary-dark);
+  --bs-btn-active-bg: var(--brand-primary-dark);
+  --bs-btn-active-border-color: var(--brand-primary-dark);
+}
+
+.btn-success {
+  --bs-btn-bg: var(--brand-secondary-dark);
+  --bs-btn-border-color: var(--brand-secondary-dark);
+  --bs-btn-hover-bg: var(--brand-secondary);
+  --bs-btn-hover-border-color: var(--brand-secondary);
+}
+
+.btn-info {
+  --bs-btn-bg: var(--brand-secondary);
+  --bs-btn-border-color: var(--brand-secondary);
+  --bs-btn-hover-bg: var(--brand-secondary-dark);
+  --bs-btn-hover-border-color: var(--brand-secondary-dark);
+}
+
+.btn-danger {
+  --bs-btn-bg: var(--brand-primary-dark);
+  --bs-btn-border-color: var(--brand-primary-dark);
+  --bs-btn-hover-bg: var(--brand-primary);
+  --bs-btn-hover-border-color: var(--brand-primary);
+}
+
+.bg-primary { background-color: var(--brand-primary) !important; }
+.bg-info { background-color: var(--brand-secondary) !important; }
+.bg-success { background-color: var(--brand-secondary-dark) !important; }
+.bg-dark { background-color: var(--brand-dark) !important; }
+.bg-light { background-color: var(--brand-light) !important; }
+
+.text-primary { color: var(--brand-primary) !important; }
+.text-muted { color: var(--brand-muted) !important; }
+.text-success { color: var(--brand-secondary-dark) !important; }
+
+.badge.bg-info { background-color: var(--brand-secondary) !important; }
+.badge.bg-success { background-color: var(--brand-secondary-dark) !important; }
+.badge.bg-primary { background-color: var(--brand-primary) !important; }
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 0.2rem rgba(var(--brand-primary-rgb), 0.2);
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--brand-primary);
+  border-bottom-color: var(--brand-primary);
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--brand-primary);
+}
+
+.table th {
+  background-color: var(--brand-primary);
+  color: var(--brand-white);
+}
+
+/* Shared page layout (reports, packages, tests) */
+.page-body {
+  background-color: var(--bg);
+}
+
+.page-header {
+  background: var(--brand-primary);
+  box-shadow: 0 2px 8px rgba(var(--brand-dark-rgb), 0.12);
+  padding: 1rem 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+.page-panel {
+  background: var(--panel);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(var(--brand-dark-rgb), 0.08);
+  border: 1px solid var(--brand-border);
+}
+
+.page-title-bar {
+  background: var(--brand-primary);
+  color: var(--brand-white);
+  padding: 1rem 1.5rem;
+  margin: -1.5rem -1.5rem 1.5rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.page-filter-section {
+  background: var(--brand-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--brand-border);
+}
+
+/* Status colors for report entry */
+.report-status-pending {
+  background-color: rgba(173, 194, 207, 0.35) !important;
+  border-left: 4px solid var(--brand-muted);
+}
+
+.report-status-completed {
+  background-color: rgba(var(--brand-primary-rgb), 0.1) !important;
+  border-left: 4px solid var(--brand-primary);
+}
+
+.report-status-ready {
+  background-color: rgba(var(--brand-secondary-rgb), 0.2) !important;
+  border-left: 4px solid var(--brand-secondary-dark);
+}
+
+.report-status-overdue {
+  background-color: rgba(22, 44, 96, 0.12) !important;
+  border-left: 4px solid var(--brand-primary-dark);
+}
+
+.status-badge-pending { background-color: var(--brand-muted); color: var(--brand-white); }
+.status-badge-completed { background-color: var(--brand-primary); color: var(--brand-white); }
+.status-badge-ready { background-color: var(--brand-secondary-dark); color: var(--brand-white); }
+.status-badge-overdue { background-color: var(--brand-primary-dark); color: var(--brand-white); }
+
+/* Scrollbar */
+::-webkit-scrollbar-track { background: var(--brand-light); }
+::-webkit-scrollbar-thumb { background: var(--brand-border); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--brand-muted); }

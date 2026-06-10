@@ -1,0 +1,245 @@
+/* SUWA SAHANA MADICAL CLINIC — Main Navigation */
+.clinic-nav {
+  background: #e1f7f4;
+  padding: 0.85rem 2.5rem;
+  box-shadow: 0 1px 6px rgba(36, 36, 36, 0.08);
+  border-bottom: 1px solid rgba(83, 171, 155, 0.25);
+  position: relative;
+  z-index: 1030;
+  width: 100%;
+}
+
+.clinic-nav__container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+.clinic-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  justify-self: start;
+}
+
+.clinic-nav__brand:hover {
+  text-decoration: none;
+  opacity: 0.92;
+}
+
+.clinic-nav__logo {
+  width: auto;
+  height: 72px;
+  max-width: 120px;
+  object-fit: contain;
+  display: block;
+}
+
+.clinic-nav__titles {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.clinic-nav__name {
+  color: #242424;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.3px;
+}
+
+.clinic-nav__subtitle {
+  color: #53ab9b;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.clinic-nav__menu {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.clinic-nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.35rem;
+}
+
+.clinic-nav__item {
+  position: relative;
+}
+
+.clinic-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1rem;
+  color: #242424;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.clinic-nav__link:hover,
+.clinic-nav__link:focus {
+  color: #11327c;
+  background: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+}
+
+.clinic-nav__link i {
+  font-size: 1rem;
+  width: 1.1rem;
+  text-align: center;
+  color: #3d3d3d;
+}
+
+.clinic-nav__link.active {
+  color: #11327c;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.clinic-nav__dropdown-toggle::after {
+  margin-left: 0.35rem;
+  vertical-align: middle;
+  border-top: 0.35em solid #242424;
+  border-right: 0.35em solid transparent;
+  border-left: 0.35em solid transparent;
+}
+
+.clinic-nav__dropdown {
+  border: 1px solid #adc2cf;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(36, 36, 36, 0.12);
+  padding: 0.4rem 0;
+  margin-top: 0.35rem !important;
+}
+
+.clinic-nav__dropdown .dropdown-item {
+  font-weight: 600;
+  color: #242424;
+  padding: 0.5rem 1rem;
+}
+
+.clinic-nav__dropdown .dropdown-item:hover,
+.clinic-nav__dropdown .dropdown-item:focus {
+  background: #e1f7f4;
+  color: #11327c;
+}
+
+.clinic-nav__logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  background: #e53935;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  justify-self: end;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 2px 6px rgba(229, 57, 53, 0.35);
+}
+
+.clinic-nav__logout:hover {
+  background: #c62828;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.clinic-nav__logout i {
+  font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .clinic-nav {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .clinic-nav__container {
+    gap: 1rem;
+  }
+
+  .clinic-nav__link span {
+    display: none;
+  }
+
+  .clinic-nav__link {
+    padding: 0.55rem 0.7rem;
+  }
+
+  .clinic-nav__logout span {
+    display: none;
+  }
+
+  .clinic-nav__logout {
+    padding: 0.55rem 0.75rem;
+  }
+
+  .clinic-nav__logo {
+    height: 58px;
+    max-width: 95px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clinic-nav {
+    padding: 0.75rem 1rem;
+  }
+
+  .clinic-nav__container {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .clinic-nav__brand,
+  .clinic-nav__menu,
+  .clinic-nav__logout {
+    justify-self: center;
+  }
+
+  .clinic-nav__list {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .clinic-nav__name {
+    font-size: 1.1rem;
+  }
+
+  .clinic-nav__subtitle {
+    font-size: 0.68rem;
+    letter-spacing: 1.2px;
+  }
+
+  .clinic-nav__logo {
+    height: 52px;
+    max-width: 80px;
+  }
+}
+
+@media print {
+  .clinic-nav {
+    display: none !important;
+  }
+}
