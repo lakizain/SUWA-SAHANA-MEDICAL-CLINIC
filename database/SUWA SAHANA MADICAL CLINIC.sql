@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS reference_ranges (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     test_id UUID REFERENCES tests(id) ON DELETE CASCADE,
     subcategory_id UUID REFERENCES test_subcategories(id) ON DELETE CASCADE,
-    gender VARCHAR(10) CHECK (gender IN ('Male', 'Female', 'Both')),
+    gender VARCHAR(10) CHECK (gender IN ('Male', 'Female', 'Both', 'Baby')),
     age_min INTEGER,
     age_max INTEGER,
     min_value TEXT,
